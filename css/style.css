@@ -527,7 +527,7 @@ input#toggle:checked + .hidden-block {
     gap: 30px;
 }
 .bonus__flex-item {
-    background-image: url(../img/Joke/origg.jpg);
+    background-image: url(../img/bonuss.jpg);
     background-size: cover;
     border: 1px solid var(--black);
     border-radius: 10px;
