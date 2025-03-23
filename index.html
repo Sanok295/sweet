@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Coffee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/main.js"></script>
+</head> 
+<body>
+    <video id="background-video" autoplay muted loop>                            ВСТУПИТЕЛЬНОЕ ВИДЕО
+        <source src="./videos/latte_art.mp4" type="video/mp4">
+    </video>
+    <header class="header">
+        <div class="header__up" id="header__up">
+            <div class="header__up-logo text"></div>
+            <nav class="header__up-menu hulm__off-720px">
+                <ul class="header__up-menu-items">
+                    <li><a class="header__up-left-menu-item text-span" href="#about">О нас</a></li>
+                    <li><a class="header__up-left-menu-item text-span" href="#cards">Меню</a></li>
+                    <li><a class="header__up-left-menu-item text-span" href="#bonus">Акции</a></li>
+                    <li><a class="header__up-left-menu-item text-span" href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <!-- БУРГЕР-МЕНЮ -->
+            <div class="header__up-burger-menu hubm__on_720px ">
+                <input type="checkbox" id="burger-toggle" hidden>
+                <label class="burger-label" for="burger-toggle">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </label>
+                <nav class="menu">
+                    <ul class="header__up-left-menu on">
+                        <li><a class="header__up-left-menu-item text-span hulmi__off-720px" href="#about">О нас</a></li>
+                        <li><a class="header__up-left-menu-item text-span" href="#cards">Меню</a></li>
+                        <li><a class="header__up-left-menu-item text-span hulmi__off-680px" href="#bonus">Акции</a></li>
+                        <li><a class="header__up-left-menu-item text-span" href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__up-right">
+                <div class="header__up-right-contacts">
+                    <a class="header__up-right-contacts-numbers-up" href="tel:+79054326761">+7-961-420-40-40</a>
+                    <div class="header__up-right-contacts-numbers-down">
+                        <a href="https://t.me/dead_superhero"><svg style="width:30px; height:30px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z"/></svg></a>
+                        <a href="https://wa.me/+79054326761"><svg style="width:30px; height:30px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+                    </div>
+                </div>         
+                <span class="header__up-right-contacts-time text-span">Каждый день <br> 7:00 - 22:00</span>
+                <a href="#order" class="header__up-right-href">Заказать кофе</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header__down">
+                <div class="header__down_text">
+                    <span class="header__down_text-span text-span">Отвлекись от повседневных забот, <br> выпей</span>
+                    <h1 class="header__down_text-h1 text-h1">КОФЕ</h1>
+                    <p class="header__down_text-p text-p">Ваша утренняя остановка - наша кофейня! Начните день с идеального кофе.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about" id="about">
+            <div class="container">   
+                <div class="about__text">
+                        <h2 class="about__h2 text-h2">О нас</h2>
+                        <p class="about__text-p text-p">Мини-кофейня, созданная с заботой о вашем вкусе</p>
+                        <p class="about__text-p text-p">Каждое зерно - это история, которую мы хотим вам рассказать</p>
+                        <p class="about__text-p text-p">Каждый напиток - результат страсти к совершенству</p>
+                </div>
+                <div class="about__flex">
+                    <div class="about__flex-item">
+                        <h3 class="about__flex-item-span text-span">Лучшие <br> сорта <br> кофе</h3>
+                        <!-- <span class="about__flex-item-span text-span">Выбери любимый вкус</span> -->
+                        <div class="about__flex-item-bg"></div>
+                        <div class="about__flex-item-vector"></div>
+                        <div class="about__flex-item-circle"></div>
+                    </div>
+                    <div class="about__flex-item">
+                        <h3 class="about__flex-item-span text-span">Бонусная <br> программа</h3>
+                        <!-- <span class="about__flex-item-span text-span">Заряди свой гаджет</span> -->
+                         <div class="about__flex-item-bg about__flex-item-bg-2"></div>
+                         <div class="about__flex-item-circle"></div>
+                         <div class="about__flex-item-circle about__flex-item-circle-2"></div>
+                    </div>
+                    <div class="about__flex-item">
+                        <h3 class="about__flex-item-span text-span">Кофе <br> с собой</h3>
+                        <!-- <span class="about__flex-item-span text-span">Возьми кофе с собой</span> -->
+                         <div class="about__flex-item-bg about__flex-item-bg-4"></div>
+                         <div class="about__flex-item-circle"></div>
+                    </div>
+                    <div class="about__flex-item">
+                        <h3 class="about__flex-item-span text-span">Большой <br> выбор <br> сиропов</h3>
+                        <!-- <span class="about__flex-item-span text-span">Сделай свой напиток ярче</span> -->
+                         <div class="about__flex-item-bg about__flex-item-bg-3"></div>
+                         <div class="about__flex-item-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cards" id="cards">
+            <div class="container">
+                <h2 class="cards__h2 text-h2">Меню</h2>
+                <div class="tabs" id="tabs">
+                    <div class="tab active text-span" onclick="showTab(0)" href="#cards">Напитки</div>
+                    <div class="tab text-span" onclick="showTab(1)" href="#cards">Зерно</div>
+                </div>
+                <div class="grid-container active">
+                    <div class="card">
+                        <img src="img/card-coffee.png" alt="">
+                        <span class="cards__grid-container-card-span text-span">Капучино</span>
+                        <p class="cards__grid-container-card-p text-p">Капучино — это гармоничное сочетание насыщенной горчинки эспрессо с легкой сладостью вспененного молока. В каждом глотке чувствуется баланс между терпкостью кофейных зерен и сливочной мягкостью.</p>
+                        <div class="grid-container-card-size">
+                            <span class="grid-container-card-size-span menu-size text-span">150мл</span>
+                            <span class="grid-container-card-size-span menu-size text-span">200мл</span>
+                            <span class="grid-container-card-size-span menu-size text-span">250мл</span>
+                            <span class="grid-container-card-size-span text-span">100р</span>
+                            <span class="grid-container-card-size-span text-span">150р</span>
+                            <span class="grid-container-card-size-span text-span">200$</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/card-coffee.png" alt="">
+                        <span class="cards__grid-container-card-span text-span">Раф</span>
+                        <p class="cards__grid-container-card-p text-p">Раф — это глубокий симбиоз насыщенного эспрессо, густой сливочной пенки и тающей во рту ванильной сладости. В каждом глотке ощущаются кремовые оттенки сливок, которые плавно переходят в мягкие карамельные ноты ванили, завершаясь тонким кофейным шлейфом. Это настоящий праздник для вкусовых рецепторов!</p>
+                        <div class="grid-container-card-size">
+                            <span class="grid-container-card-size-span menu-size text-span">150 мл</span>
+                            <span class="grid-container-card-size-span menu-size text-span">200 мл</span>
+                            <span class="grid-container-card-size-span menu-size text-span">250 мл</span>
+                            <span class="grid-container-card-size-span text-span">100 р</span>
+                            <span class="grid-container-card-size-span text-span">150 р</span>
+                            <span class="grid-container-card-size-span text-span">200 $</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/card-coffee.png" alt="">
+                        <span class="cards__grid-container-card-span text-span">Латте</span>
+                        <p class="cards__grid-container-card-p text-p">Латте — это сочетание шелковистого молока и деликатного эспрессо, где каждый глоток раскрывается многослойным вкусом. Сладость молока плавно переходит в легкую горчинку кофе, оставляя приятное послевкусие.</p>
+                        <div class="grid-container-card-size">
+                            <span class="grid-container-card-size-span menu-size text-span">150мл</span>
+                            <span class="grid-container-card-size-span menu-size text-span">200мл</span>
+                            <span class="grid-container-card-size-span menu-size text-span">250мл</span>
+                            <span class="grid-container-card-size-span text-span">100р</span>
+                            <span class="grid-container-card-size-span text-span">150р</span>
+                            <span class="grid-container-card-size-span text-span">200$</span>
+                        </div>
+                    </div>
+                    <label class="btn" for="toggle">Все позиции</label>
+                    <input type="checkbox" id="toggle" hidden>
+                    <div class="hidden-block">
+                        <div class="hidden-menu" id="fullMenu">
+                            <div class="card">
+                                <img src="img/Joke/Vasabi.jpg" alt="">
+                                <span class="cards__grid-container-card-span text-span">Флэт Уайт</span>
+                                <p class="cards__grid-container-card-p text-p">Флет уайт — это сочетание терпкого эспрессо и едва заметной молочной пенки, которая добавляет напитку легкую сладость. В каждом глотке чувствуются глубокие шоколадные и ореховые ноты, гармонично переплетающиеся с бархатистой текстурой, что делает этот кофе поистине незабываемым.</p>
+                                <div class="grid-container-card-size">
+                                    <span class="grid-container-card-size-span menu-size text-span">S</span>
+                                    <span class="grid-container-card-size-span menu-size text-span">M</span>
+                                    <span class="grid-container-card-size-span menu-size text-span">XXL</span>
+                                    <span class="grid-container-card-size-span text-span">100р</span>
+                                    <span class="grid-container-card-size-span text-span">150р</span>
+                                    <span class="grid-container-card-size-span text-span">200$</span>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="img/Joke/Vasabi.jpg" alt="">
+                                <span class="cards__grid-container-card-span text-span">Какао</span>
+                                <p class="cards__grid-container-card-p text-p">Какао — это богатое сочетание глубокого шоколадного аромата и нежной молочной сладости, создающее теплое и обволакивающее ощущение во рту. Каждый глоток дарит ощущение уюта и комфорта, напоминая о детстве и зимних вечерах у камина.
+                                </p>
+                                <div class="grid-container-card-size">
+                                    <span class="grid-container-card-size-span menu-size text-span">S</span>
+                                    <span class="grid-container-card-size-span menu-size text-span">M</span>
+                                    <span class="grid-container-card-size-span menu-size text-span">XXL</span>
+                                    <span class="grid-container-card-size-span text-span">100р</span>
+                                    <span class="grid-container-card-size-span text-span">150р</span>
+                                    <span class="grid-container-card-size-span text-span">200$</span>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="img/Joke/Vasabi.jpg" alt="">
+                                <span class="cards__grid-container-card-span text-span">Горячий шоколад</span>
+                                <p class="cards__grid-container-card-p text-p">Горячий шоколад — это густой, тягучий напиток с насыщенным вкусом темного шоколада и легкой сладостью. Каждый глоток — это настоящее удовольствие, где чувствуешь сладость и долгое, шоколадное послевкусие.</p>
+                                <div class="grid-container-card-size">
+                                    <span class="grid-container-card-size-span menu-size text-span">S</span>
+                                    <span class="grid-container-card-size-span menu-size text-span">M</span>
+                                    <span class="grid-container-card-size-span menu-size text-span">XXL</span>
+                                    <span class="grid-container-card-size-span text-span">100р</span>
+                                    <span class="grid-container-card-size-span text-span">150р</span>
+                                    <span class="grid-container-card-size-span text-span">200$</span>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="img/Joke/Vasabi.jpg" alt="">
+                                <span class="cards__grid-container-card-span text-span">Джомбучино</span>
+                                <p class="cards__grid-container-card-p text-p">Раф — это глубокий симбиоз насыщенного эспрессо, густой сливочной пенки и тающей во рту ванильной сладости. В каждом глотке ощущаются кремовые оттенки сливок, которые плавно переходят в мягкие карамельные ноты ванили, завершаясь тонким кофейным шлейфом. Это настоящий праздник для вкусовых рецепторов!</p>
+                                <div class="grid-container-card-size">
+                                    <span class="grid-container-card-size-span menu-size text-span">S</span>
+                                    <span class="grid-container-card-size-span menu-size text-span">M</span>
+                                    <span class="grid-container-card-size-span menu-size text-span">XXL</span>
+                                    <span class="grid-container-card-size-span text-span">100р</span>
+                                    <span class="grid-container-card-size-span text-span">150р</span>
+                                    <span class="grid-container-card-size-span text-span">200$</span>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="img/Joke/Vasabi.jpg" alt="">
+                                <span class="cards__grid-container-card-span text-span">Джомбучино</span>
+                                <p class="cards__grid-container-card-p text-p">Раф — это глубокий симбиоз насыщенного эспрессо, густой сливочной пенки и тающей во рту ванильной сладости. В каждом глотке ощущаются кремовые оттенки сливок, которые плавно переходят в мягкие карамельные ноты ванили, завершаясь тонким кофейным шлейфом. Это настоящий праздник для вкусовых рецепторов!</p>
+                                <div class="grid-container-card-size">
+                                    <span class="grid-container-card-size-span menu-size text-span">S</span>
+                                    <span class="grid-container-card-size-span menu-size text-span">M</span>
+                                    <span class="grid-container-card-size-span menu-size text-span">XXL</span>
+                                    <span class="grid-container-card-size-span text-span">100р</span>
+                                    <span class="grid-container-card-size-span text-span">150р</span>
+                                    <span class="grid-container-card-size-span text-span">200$</span>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="img/Joke/Vasabi.jpg" alt="">
+                                <span class="cards__grid-container-card-span text-span">Джомбучино</span>
+                                <p class="cards__grid-container-card-p text-p">Раф — это глубокий симбиоз насыщенного эспрессо, густой сливочной пенки и тающей во рту ванильной сладости. В каждом глотке ощущаются кремовые оттенки сливок, которые плавно переходят в мягкие карамельные ноты ванили, завершаясь тонким кофейным шлейфом. Это настоящий праздник для вкусовых рецепторов!</p>
+                                <div class="grid-container-card-size">
+                                    <span class="grid-container-card-size-span menu-size text-span">S</span>
+                                    <span class="grid-container-card-size-span menu-size text-span">M</span>
+                                    <span class="grid-container-card-size-span menu-size text-span">XXL</span>
+                                    <span class="grid-container-card-size-span text-span">100р</span>
+                                    <span class="grid-container-card-size-span text-span">150р</span>
+                                    <span class="grid-container-card-size-span text-span">200$</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="grid-container">
+                    <div class="card">
+                        <img src="img/Joke/Vasabi.jpg" alt="">
+                        <span class="cards__grid-container-card-span text-span">Джомбучино</span>
+                        <p class="cards__grid-container-card-p text-p">Раф — это глубокий симбиоз насыщенного эспрессо, густой сливочной пенки и тающей во рту ванильной сладости. В каждом глотке ощущаются кремовые оттенки сливок, которые плавно переходят в мягкие карамельные ноты ванили, завершаясь тонким кофейным шлейфом. Это настоящий праздник для вкусовых рецепторов!</p>
+                        <div class="grid-container-card-size">
+                            <span class="grid-container-card-size-span menu-size text-span">S</span>
+                            <span class="grid-container-card-size-span menu-size text-span">M</span>
+                            <span class="grid-container-card-size-span menu-size text-span">XXL</span>
+                            <span class="grid-container-card-size-span text-span">100р</span>
+                            <span class="grid-container-card-size-span text-span">150р</span>
+                            <span class="grid-container-card-size-span text-span">200$</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Joke/Vasabi.jpg" alt="">
+                        <span class="cards__grid-container-card-span text-span">Джомбучино</span>
+                        <p class="cards__grid-container-card-p text-p">Раф — это глубокий симбиоз насыщенного эспрессо, густой сливочной пенки и тающей во рту ванильной сладости. В каждом глотке ощущаются кремовые оттенки сливок, которые плавно переходят в мягкие карамельные ноты ванили, завершаясь тонким кофейным шлейфом. Это настоящий праздник для вкусовых рецепторов!</p>
+                        <div class="grid-container-card-size">
+                            <span class="grid-container-card-size-span menu-size text-span">S</span>
+                            <span class="grid-container-card-size-span menu-size text-span">M</span>
+                            <span class="grid-container-card-size-span menu-size text-span">XXL</span>
+                            <span class="grid-container-card-size-span text-span">100р</span>
+                            <span class="grid-container-card-size-span text-span">150р</span>
+                            <span class="grid-container-card-size-span text-span">200$</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Joke/Vasabi.jpg" alt="">
+                        <span class="cards__grid-container-card-span text-span">Джомбучино</span>
+                        <p class="cards__grid-container-card-p text-p">Раф — это глубокий симбиоз насыщенного эспрессо, густой сливочной пенки и тающей во рту ванильной сладости. В каждом глотке ощущаются кремовые оттенки сливок, которые плавно переходят в мягкие карамельные ноты ванили, завершаясь тонким кофейным шлейфом. Это настоящий праздник для вкусовых рецепторов!</p>
+                        <div class="grid-container-card-size">
+                            <span class="grid-container-card-size-span menu-size text-span">S</span>
+                            <span class="grid-container-card-size-span menu-size text-span">M</span>
+                            <span class="grid-container-card-size-span menu-size text-span">XXL</span>
+                            <span class="grid-container-card-size-span text-span">100р</span>
+                            <span class="grid-container-card-size-span text-span">150р</span>
+                            <span class="grid-container-card-size-span text-span">200$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <section class="bonus" id="bonus">
+            <div class="container">
+                <h2 class="bonus__h2 text-h2">Акции</h2>
+                <p class="bonus__p text-p">Действующие и предстоящиее акции, скидки и бонусы</p>
+                <div class="bonus__flex">
+                    <div class="bonus__flex-item">
+                        
+                    </div>
+                    <div class="bonus__flex-item">
+                        
+                    </div>
+                    <div class="bonus__flex-item">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery off-before" id="gallery">
+            <div class="container">
+                <div class="gallery__cards row">
+                    <div class="gallery__cards_item item-1 col-3 col-Lg-6"></div>
+                    <div class="gallery__cards_item item-2 col-3 col-Lg-6"></div>
+                    <div class="gallery__cards_item item-3 col-3 col-Lg-6"></div>
+                    <div class="gallery__cards_item item-4 col-3 col-Lg-6"></div>
+                </div>
+                <div class="gallery__cards row">
+                    <div class="gallery__cards_item item-5 col-3 col-Lg-6"></div>
+                    <div class="gallery__cards_item item-6 col-3 col-Lg-6"></div>
+                    <div class="gallery__cards_item item-7 col-3 col-Lg-6"></div>
+                    <div class="gallery__cards_item item-8 col-3 col-Lg-6"></div>
+                </div>
+            </div>
+        </section>
+        <section class="order" id="order">
+            <div class="container">
+                <h2 class="order__h2-left text-h2">Где вам удобно</h2>
+                <h2 class="order__h2-right text-h2">сделать заказ?</h2>
+                <!-- <span class="order__p text-p">Позвоните нам по номеру или напишите в одном из мессенджеров</span> -->
+                <div class="all__orders">
+                    <div class="order__mess">
+                        <a href="tel:+79054326761" class="order__number">+7-905-432-67-61</a>
+                        <a href="tel:+79614204040" class="order__number">+7-961-420-40-40</a>
+                    </div>
+                    <div class="footer__map">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5c08304b60b162e717fe103bb5849ca849bb9a42c5a1ea8b6e6deb1cf77d9bf8&amp;width=300&amp;height=20 0&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
+                    <div class="order__mess">
+                        <a href="https://t.me/dead_superhero?text=Привет, можно мне Калмыкано XS!">Telegram
+                        </a>
+                        <a href="https://wa.me/+79054326761?text=Привет, хочу заказать кофе!">Whatsapp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="header__up-logo text"></div>
+            <div class="footer__text">Ждём вас</div>
+            <div class="footer__contacts">
+                <div class="footer__contacts-adress"><a href="https://yandex.ru/maps/39/rostov-na-donu/?from=mapframe&ll=39.630713%2C47.208196&mode=usermaps&source=mapframe&um=constructor%3A5c08304b60b162e717fe103bb5849ca849bb9a42c5a1ea8b6e6deb1cf77d9bf8&utm_source=mapframe&z=18"><span class="footer__text-span">Коммунистический <br> проспект, 27в</span></a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
