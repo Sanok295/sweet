@@ -744,3 +744,4 @@ input#toggle:checked + .hidden-block {
 #burger-toggle:checked ~ .menu {
     display: block;
 }
+
